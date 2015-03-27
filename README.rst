@@ -1,10 +1,10 @@
-PythonTemplate
-==============
+================
+ PythonTemplate
+================
 
-This is the template I use for my Python projects.
+This is the template I use for my Python projects. This isn't a real project.
 
-Work in progress, unfinished and unpublished. API can and will change without notice or documentation until 0.1.0 is
-reached.
+* Python 2.6, 2.7, PyPy, PyPy3, 3.3, and 3.4 supported on Linux
 
 .. |buildAppveyor| image:: https://img.shields.io/appveyor/ci/Robpol86/REPLACE_ME.svg?style=flat-square
    :target: https://ci.appveyor.com/project/Robpol86/REPLACE_ME
@@ -31,3 +31,19 @@ Windows         Linux/OS X       Coverage      Latest          Downloads
 =============== ================ ============= =============== ===========
 |buildAppveyor| |buildTravis|    |coverage|    |latestVersion| |downloads|
 =============== ================ ============= =============== ===========
+
+`Changelog`_
+============
+
+This project adheres to `Semantic Versioning <http://semver.org/>`_.
+
+`0.2.0 - 2015-03-26`_
+---------------------
+
+Added
+    * Python2.6, PyPy, and PyPy3 support.
+
+`0.1.1 - 2015-03-15`_
+---------------------
+
+* Initial release.
