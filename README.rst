@@ -4,7 +4,8 @@
 
 This is the template I use for my Python projects. This isn't a real project.
 
-* Python 2.6, 2.7, PyPy, PyPy3, 3.3, and 3.4 supported on Linux
+* Python 2.6, 2.7, PyPy, PyPy3, 3.3, and 3.4 supported on Linux and OS X.
+* Python 2.7, 3.3, and 3.4 supported on Windows (both 32 and 64 bit versions of Python).
 
 .. |buildAppveyor| image:: https://img.shields.io/appveyor/ci/Robpol86/REPLACE_ME.svg?style=flat-square
    :target: https://ci.appveyor.com/project/Robpol86/REPLACE_ME
