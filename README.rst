@@ -1,6 +1,6 @@
-================
- PythonTemplate
-================
+==============
+PythonTemplate
+==============
 
 This is the template I use for my Python projects. This isn't a real project.
 
