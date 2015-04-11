@@ -29,8 +29,8 @@ Tested on Windows XP and Windows 10 technical preview.
    :target: https://pypi.python.org/pypi/REPLACE_ME/
    :alt: Downloads
 
-`Quickstart`_
-=============
+Quickstart
+==========
 
 Install:
 
@@ -44,18 +44,18 @@ Run:
 
     REPLACE_ME
 
-`Changelog`_
-============
+Changelog
+=========
 
 This project adheres to `Semantic Versioning <http://semver.org/>`_.
 
-`0.2.0 - 2015-03-26`_
----------------------
+0.2.0 - 2015-03-26
+------------------
 
 Added
     * Python2.6, PyPy, and PyPy3 support.
 
-`0.1.1 - 2015-03-15`_
----------------------
+0.1.1 - 2015-03-15
+------------------
 
 * Initial release.
