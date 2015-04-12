@@ -48,14 +48,6 @@ coverage.xml
 *.mo
 *.pot
 
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
-
-# Rope
-.ropeproject
-
 # Django stuff:
 *.log
 
