@@ -41,17 +41,10 @@ KEYWORDS = 'replace me'
 NAME = 'replace_me'
 NAME_FILE = NAME
 PACKAGE = False
+REQUIRES_INSTALL = []
+REQUIRES_TEST = ['pytest-cov']
+REQUIRES_ALL = REQUIRES_INSTALL + REQUIRES_TEST
 VERSION_FILE = os.path.join(NAME_FILE, '__init__.py') if PACKAGE else '{0}.py'.format(NAME_FILE)
-
-
-def _requires(path):
-    """Read requirements file."""
-    if not os.path.exists(os.path.join(HERE, path)):
-        return list()
-    file_handle = codecs.open(os.path.join(HERE, path), encoding='utf-8')
-    requirements = [i.strip() for i in file_handle if i[0] != '-']
-    file_handle.close()
-    return requirements
 
 
 def _safe_read(path, length):
@@ -115,11 +108,12 @@ ALL_DATA = dict(
     classifiers=CLASSIFIERS,
     cmdclass={PyTest.CMD: PyTest, PyTestPdb.CMD: PyTestPdb, PyTestCovWeb.CMD: PyTestCovWeb},
     description=DESCRIPTION,
-    install_requires=_requires('requirements.txt'),
+    install_requires=REQUIRES_INSTALL,
     keywords=KEYWORDS,
     long_description=_safe_read('README.rst', 15000),
     name=NAME,
-    tests_require=_requires('requirements-test.txt'),
+    requires=REQUIRES_INSTALL,
+    tests_require=REQUIRES_TEST,
     url='https://github.com/Robpol86/{0}'.format(NAME),
     zip_safe=True,
 )
@@ -128,7 +122,6 @@ ALL_DATA = dict(
 # noinspection PyTypeChecker
 ALL_DATA.update(dict(_VERSION_RE.findall(_safe_read(VERSION_FILE, 1500).replace('\r\n', '\n'))))
 ALL_DATA.update(dict(py_modules=[NAME_FILE]) if not PACKAGE else dict(packages=[NAME_FILE] + _PACKAGES()))
-ALL_DATA['requires'] = ALL_DATA['install_requires']
 
 
 if __name__ == '__main__':
