@@ -10,7 +10,7 @@ import setuptools
 _PACKAGES = lambda: [os.path.join(r, s) for r, d, _ in os.walk(NAME_FILE) for s in d if s != '__pycache__']
 _VERSION_RE = re.compile(r"^__(version|author|license)__ = '([\w\.@]+)'$", re.MULTILINE)
 
-CLASSIFIERS = (
+CLASSIFIERS = [
     'Development Status :: 5 - Production/Stable',
     'Environment :: Console',
     'Environment :: MacOS X',
@@ -19,9 +19,8 @@ CLASSIFIERS = (
     'License :: OSI Approved :: MIT License',
     'Operating System :: MacOS :: MacOS X',
     'Operating System :: Microsoft :: Windows',
-    'Operating System :: POSIX',
     'Operating System :: POSIX :: Linux',
-    'Programming Language :: Python :: 2.6',
+    'Operating System :: POSIX',
     'Programming Language :: Python :: 2.7',
     'Programming Language :: Python :: 3.3',
     'Programming Language :: Python :: 3.4',
@@ -29,7 +28,7 @@ CLASSIFIERS = (
     'Topic :: Software Development :: Libraries',
     'Topic :: Terminals',
     'Topic :: Text Processing :: Markup',
-)
+]
 DESCRIPTION = 'This is the template I use for my Python projects.'
 HERE = os.path.abspath(os.path.dirname(__file__))
 KEYWORDS = 'replace me'
