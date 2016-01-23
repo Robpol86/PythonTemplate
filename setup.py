@@ -15,18 +15,18 @@ def readme():
     :return: File contents.
     :rtype: str
     """
-    abspath = os.path.realpath(os.path.join(os.path.dirname(__file__), 'README.rst'))
-    file_handle = None
+    path = os.path.realpath(os.path.join(os.path.dirname(__file__), 'README.rst'))
+    handle = None
     try:
-        file_handle = codecs.open(abspath, encoding='utf-8')
-        return file_handle.read(131072)
+        handle = codecs.open(path, encoding='utf-8')
+        return handle.read(131072)
     except IOError:
         return ''
     finally:
-        getattr(file_handle, 'close', lambda: None)()
+        getattr(handle, 'close', lambda: None)()
 
 
-setup(
+KWARGS = dict(
     author='@Robpol86',
     author_email='robpol86@gmail.com',
     classifiers=['Private :: Do Not Upload'],
@@ -41,3 +41,7 @@ setup(
     version='0.0.1',
     zip_safe=True,
 )
+
+
+if __name__ == '__main__':
+    setup(**KWARGS)
