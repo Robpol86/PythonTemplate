@@ -26,7 +26,7 @@ def readme():
         getattr(handle, 'close', lambda: None)()
 
 
-KWARGS = dict(
+setup(
     author='@Robpol86',
     author_email='robpol86@gmail.com',
     classifiers=['Private :: Do Not Upload'],
@@ -41,7 +41,3 @@ KWARGS = dict(
     version='0.0.1',
     zip_safe=True,
 )
-
-
-if __name__ == '__main__':
-    setup(**KWARGS)

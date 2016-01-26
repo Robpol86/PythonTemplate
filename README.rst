@@ -4,6 +4,8 @@ PythonTemplate
 
 This is the template I use for my Python projects. This isn't a real project.
 
+Documentation for REPLACE_ME is available at https://REPLACE_ME.readthedocs.org
+
 * Python 2.6, 2.7, PyPy, PyPy3, 3.3, 3.4, and 3.5 supported on Linux and OS X.
 * Python 2.7, 3.3, 3.4, and 3.5 supported on Windows (both 32 and 64 bit versions of Python).
 
@@ -36,8 +38,7 @@ Install:
 
     pip install REPLACE_ME
 
-For more information on how to use the extension please read the documentation at:
-https://REPLACE_ME.readthedocs.org
+Documentation is available at https://REPLACE_ME.readthedocs.org
 
 Changelog
 =========
