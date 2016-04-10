@@ -45,8 +45,8 @@ Changelog
 
 This project adheres to `Semantic Versioning <http://semver.org/>`_.
 
-0.2.0 - 2015-03-26
-------------------
+Unreleased
+----------
 
 Added
     * Python2.6, PyPy, and PyPy3 support.
