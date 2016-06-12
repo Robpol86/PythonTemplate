@@ -4,10 +4,10 @@ PythonTemplate
 
 This is the template I use for my Python projects. This isn't a real project.
 
-Documentation for REPLACE_ME is available at https://REPLACE_ME.readthedocs.org
-
 * Python 2.6, 2.7, PyPy, PyPy3, 3.3, 3.4, and 3.5 supported on Linux and OS X.
 * Python 2.7, 3.3, 3.4, and 3.5 supported on Windows (both 32 and 64 bit versions of Python).
+
+📖 Full documentation: https://robpol86.github.io/REPLACE_ME
 
 .. image:: https://img.shields.io/appveyor/ci/Robpol86/REPLACE_ME/master.svg?style=flat-square&label=AppVeyor%20CI
     :target: https://ci.appveyor.com/project/Robpol86/REPLACE_ME
@@ -25,10 +25,6 @@ Documentation for REPLACE_ME is available at https://REPLACE_ME.readthedocs.org
     :target: https://pypi.python.org/pypi/REPLACE_ME
     :alt: Latest Version
 
-.. image:: https://img.shields.io/pypi/dm/REPLACE_ME.svg?style=flat-square&label=PyPI%20Downloads
-    :target: https://pypi.python.org/pypi/REPLACE_ME
-    :alt: Downloads
-
 Quickstart
 ==========
 
@@ -38,7 +34,12 @@ Install:
 
     pip install REPLACE_ME
 
-Documentation is available at https://REPLACE_ME.readthedocs.org
+Usage:
+
+.. code::
+
+    import REPLACE_ME
+    # Do something.
 
 Changelog
 =========
