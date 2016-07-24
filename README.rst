@@ -4,7 +4,7 @@ PythonTemplate
 
 This is the template I use for my Python projects. This isn't a real project.
 
-* Python 2.6, 2.7, PyPy, PyPy3, 3.3, 3.4, and 3.5 supported on Linux and OS X.
+* Python 2.7, PyPy, PyPy3, 3.3, 3.4, and 3.5 supported on Linux and OS X.
 * Python 2.7, 3.3, 3.4, and 3.5 supported on Windows (both 32 and 64 bit versions of Python).
 
 📖 Full documentation: https://robpol86.github.io/REPLACE_ME
@@ -41,6 +41,8 @@ Usage:
     import REPLACE_ME
     # Do something.
 
+.. changelog-section-start
+
 Changelog
 =========
 
@@ -56,3 +58,5 @@ Added
 ------------------
 
 * Initial release.
+
+.. changelog-section-end
