@@ -4,7 +4,7 @@ PythonTemplate
 
 This is the template I use for my Python projects. This isn't a real project.
 
-* Python 2.7, PyPy, PyPy3, 3.3, 3.4, and 3.5 supported on Linux and OS X.
+* Python 2.7, PyPy, 3.3, 3.4, and 3.5 supported on Linux and OS X.
 * Python 2.7, 3.3, 3.4, and 3.5 supported on Windows (both 32 and 64 bit versions of Python).
 
 📖 Full documentation: https://robpol86.github.io/REPLACE_ME
@@ -52,7 +52,7 @@ Unreleased
 ----------
 
 Added
-    * Python2.6, PyPy, and PyPy3 support.
+    * Something.
 
 0.1.1 - 2015-03-15
 ------------------
