@@ -9,7 +9,7 @@ import re
 
 from setuptools import Command, setup
 
-INSTALL_REQUIRES = []
+INSTALL_REQUIRES = ['colorclass', 'docopt']
 LICENSE = 'MIT'
 NAME = IMPORT = 'replace_me'
 VERSION = '0.0.1'
@@ -54,7 +54,7 @@ class CheckVersion(Command):
     @classmethod
     def run(cls):
         """Check variables."""
-        project = __import__(IMPORT)
+        project = __import__(IMPORT, fromlist=[''])
         for expected, var in [('@Robpol86', '__author__'), (LICENSE, '__license__'), (VERSION, '__version__')]:
             if getattr(project, var) != expected:
                 raise SystemExit('Mismatch: {0}'.format(var))
@@ -63,9 +63,12 @@ class CheckVersion(Command):
             raise SystemExit('Version not found in readme/changelog file.')
         # Check tox.
         if INSTALL_REQUIRES:
-            in_tox = re.findall(r'\ninstall_requires =\n(?:    ([^=]+)==[\w\d.-]+\n)+?', readme('tox.ini'))
-            if set(INSTALL_REQUIRES) != set(in_tox):
-                raise SystemExit('Missing pinned dependencies in tox.ini.')
+            section = re.compile(r'\ninstall_requires =\n(.+?)\n\w', re.DOTALL).findall(readme('tox.ini'))
+            if not section:
+                raise SystemExit('Missing install_requires section in tox.ini.')
+            in_tox = re.findall(r'    ([^=]+)==[\w\d.-]+', section[0])
+            if INSTALL_REQUIRES != in_tox:
+                raise SystemExit('Missing/unordered pinned dependencies in tox.ini.')
 
 
 setup(
