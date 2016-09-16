@@ -1,11 +1,10 @@
-==============
-PythonTemplate
-==============
+==========
+REPLACE_ME
+==========
 
 This is the template I use for my Python projects. This isn't a real project.
 
-* Python 2.7, PyPy, 3.3, 3.4, and 3.5 supported on Linux and OS X.
-* Python 2.7, 3.3, 3.4, and 3.5 supported on Windows (both 32 and 64 bit versions of Python).
+* Python 2.7, 3.3, 3.4, and 3.5 supported on Linux, OS X, and Windows (both 32 and 64 bit versions of Python).
 
 📖 Full documentation: https://robpol86.github.io/REPLACE_ME
 
@@ -17,8 +16,8 @@ This is the template I use for my Python projects. This isn't a real project.
     :target: https://travis-ci.org/Robpol86/REPLACE_ME
     :alt: Build Status
 
-.. image:: https://img.shields.io/coveralls/Robpol86/REPLACE_ME/master.svg?style=flat-square&label=Coveralls
-    :target: https://coveralls.io/github/Robpol86/REPLACE_ME
+.. image:: https://img.shields.io/codecov/c/github/Robpol86/REPLACE_ME/master.svg?style=flat-square&label=Codecov
+    :target: https://codecov.io/gh/Robpol86/REPLACE_ME
     :alt: Coverage Status
 
 .. image:: https://img.shields.io/pypi/v/REPLACE_ME.svg?style=flat-square&label=Latest
@@ -36,7 +35,7 @@ Install:
 
 Usage:
 
-.. code::
+.. code:: python
 
     import REPLACE_ME
     # Do something.

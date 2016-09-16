@@ -59,11 +59,12 @@ class CheckVersion(Command):
             if getattr(project, var) != expected:
                 raise SystemExit('Mismatch: {0}'.format(var))
         # Check changelog.
-        if not re.compile(r'^%s - \d{4}-\d{2}-\d{2}$' % VERSION, re.MULTILINE).search(readme()):
+        if not re.compile(r'^%s - \d{4}-\d{2}-\d{2}[\r\n]' % VERSION, re.MULTILINE).search(readme()):
             raise SystemExit('Version not found in readme/changelog file.')
         # Check tox.
         if INSTALL_REQUIRES:
-            section = re.compile(r'\ninstall_requires =\n(.+?)\n\w', re.DOTALL).findall(readme('tox.ini'))
+            contents = readme('tox.ini')
+            section = re.compile(r'[\r\n]+install_requires =[\r\n]+(.+?)[\r\n]+\w', re.DOTALL).findall(contents)
             if not section:
                 raise SystemExit('Missing install_requires section in tox.ini.')
             in_tox = re.findall(r'    ([^=]+)==[\w\d.-]+', section[0])
@@ -71,21 +72,22 @@ class CheckVersion(Command):
                 raise SystemExit('Missing/unordered pinned dependencies in tox.ini.')
 
 
-setup(
-    author='@Robpol86',
-    author_email='robpol86@gmail.com',
-    classifiers=[
-        'Private :: Do Not Upload',
-    ],
-    cmdclass=dict(check_version=CheckVersion),
-    description='This is the template I use for my Python projects.',
-    install_requires=INSTALL_REQUIRES,
-    keywords='replace me',
-    license=LICENSE,
-    long_description=readme(),
-    name=NAME,
-    packages=[IMPORT],
-    url='https://github.com/Robpol86/' + NAME,
-    version=VERSION,
-    zip_safe=True,
-)
+if __name__ == '__main__':
+    setup(
+        author='@Robpol86',
+        author_email='robpol86@gmail.com',
+        classifiers=[
+            'Private :: Do Not Upload',
+        ],
+        cmdclass=dict(check_version=CheckVersion),
+        description='This is the template I use for my Python projects.',
+        install_requires=INSTALL_REQUIRES,
+        keywords='replace me',
+        license=LICENSE,
+        long_description=readme(),
+        name=NAME,
+        packages=[IMPORT],
+        url='https://github.com/Robpol86/' + NAME,
+        version=VERSION,
+        zip_safe=True,
+    )

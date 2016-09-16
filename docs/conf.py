@@ -2,18 +2,17 @@
 
 import os
 import time
-from subprocess import check_output
 
-SETUP = os.path.join(os.path.dirname(__file__), '..', 'setup.py')
+from setup import NAME, VERSION
 
 
 # General configuration.
-author = check_output([SETUP, '--author']).strip().decode('ascii')
+author = '@Robpol86'
 copyright = '{}, {}'.format(time.strftime('%Y'), author)
 master_doc = 'index'
-project = check_output([SETUP, '--name']).strip().decode('ascii')
+project = NAME
 pygments_style = 'friendly'
-release = version = check_output([SETUP, '--version']).strip().decode('ascii')
+release = version = VERSION
 templates_path = ['_templates']
 extensions = list()
 
@@ -39,5 +38,6 @@ googleanalytics_id = 'UA-82627369-1'
 # SCVersioning.
 scv_banner_greatest_tag = True
 scv_grm_exclude = ('.gitignore', '.nojekyll', 'README.rst')
+scv_overflow = ('-W',)
 scv_show_banner = True
 scv_sort = ('semver', 'time')
