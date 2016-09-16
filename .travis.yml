@@ -26,7 +26,7 @@ sudo: false
 
 # Run.
 install: pip install tox
-script: tox -e ${TOX_ENV:-py${TRAVIS_PYTHON_VERSION//.}}
+script: tox -e ${TOX_ENV:-py}
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
