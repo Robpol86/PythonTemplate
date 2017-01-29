@@ -1,12 +1,19 @@
 # Configure.
-env: TOX_ENV=py
 language: python
+python:
+  - 3.5
+  - 3.4
+  - 3.3
+  - 2.7
+sudo: false
+
+# Environment and matrix.
+env: TOX_ENV=py
 matrix:
   include:
     - python: 3.5
       env: TOX_ENV=lint
-      after_success:
-        - echo
+      after_success: []
     - python: 3.5
       env: TOX_ENV=docs
       after_success:
@@ -18,12 +25,6 @@ matrix:
         - git remote set-url --push origin "git@github.com:$TRAVIS_REPO_SLUG"
         - export ${!TRAVIS*}
         - tox -e docsV
-python:
-  - 3.5
-  - 3.4
-  - 3.3
-  - 2.7
-sudo: false
 
 # Run.
 install: pip install tox
